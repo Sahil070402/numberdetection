@@ -9,7 +9,7 @@ import pandas as pd
 import time
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
-image = cv2.imread(r'C:\Users\sahil sareen\OneDrive\Documents\ossplabproject\22.jpeg')
+image = cv2.imread(r'C:\Users\sahil sareen\OneDrive\Documents\ossplabproject\33.jpg')
 
 image = imutils.resize(image, width=500)
 
@@ -24,7 +24,7 @@ cv2.imshow("2 - Bilateral Filter", gray)#2
 edged = cv2.Canny(gray, 170, 200)
 cv2.imshow("4 - Canny Edges", edged)#3
 #print("1")
-cv2.waitKey(10000)
+cv2.waitKey(1000)
 cv2.destroyAllWindows()#4
 #print("2")
 (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)#removed new
